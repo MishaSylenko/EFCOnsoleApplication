@@ -38,9 +38,6 @@ var commands = provider.GetRequiredService<Commands>();
 var executor = provider.GetRequiredService<IQueryExecutor>();
 
 
-
-EntitiesGenerator.GenerateEntities(db, logger);
-
 logger.LogInformation("Number of teachers in database: {Count}", db.Teachers.Count());
 
 await commands.ListAllTeachersAsync();
