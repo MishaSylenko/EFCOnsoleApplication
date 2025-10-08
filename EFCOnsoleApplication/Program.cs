@@ -1,9 +1,9 @@
 ﻿using ContextAndMigrations.Context;
 using EFCOnsoleApplication.Generator;
 using EFCOnsoleApplication.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
 using Models.Abstraction;
 using Models.Models;
 

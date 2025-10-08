@@ -1,9 +1,8 @@
-﻿using Models.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Models.Models;
 
 namespace ContextAndMigrations.Configurations;
-
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 public class TeacherConfiguration : IEntityTypeConfiguration<Teacher>
 {

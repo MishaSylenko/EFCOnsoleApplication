@@ -1,5 +1,4 @@
 ﻿using ContextAndMigrations.Context;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Models.Models;
 
@@ -62,5 +61,4 @@ public static class EntitiesGenerator
 
         logger.LogInformation("Initial data successfully seeded.");
     }
-    
 }

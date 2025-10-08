@@ -6,7 +6,7 @@ public class Student
     public string FirstName { get; init; } = null!;
     public string LastName { get; init; } = null!;
     public int Age { get; init; }
-    
-    public List<Course> Courses { get; init; } = new(); 
+
+    public List<Course> Courses { get; init; } = new();
     public List<Teacher> Teachers { get; init; } = new();
-}   
+}

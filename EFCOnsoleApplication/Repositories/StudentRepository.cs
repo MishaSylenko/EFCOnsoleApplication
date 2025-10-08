@@ -8,13 +8,15 @@ namespace EFCOnsoleApplication.Repositories;
 public class StudentRepository : IRepository<Student>
 {
     private readonly CAContext _context;
+
     public StudentRepository(CAContext context)
     {
         _context = context;
     }
+
     public async Task<IEnumerable<Student>> GetAllAsync()
     {
-       return await _context.Students.ToListAsync();
+        return await _context.Students.ToListAsync();
     }
 
     public async Task<Student?> GetByIdAsync(int id)

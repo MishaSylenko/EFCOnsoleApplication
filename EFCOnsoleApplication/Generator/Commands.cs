@@ -1,7 +1,4 @@
-﻿using ContextAndMigrations.Context;
-using EFCOnsoleApplication.Repositories;
-using Microsoft.Extensions.Logging;
-using Models.Abstraction;
+﻿using Models.Abstraction;
 using Models.Models;
 
 namespace EFCOnsoleApplication.Generator;
@@ -26,9 +23,7 @@ public class Commands
     {
         var teachers = await _teacherRepository.GetAllAsync();
         foreach (var teacher in teachers)
-        {
             Console.WriteLine($"Teacher ID: {teacher.Id}, Name: {teacher.FirstName} {teacher.LastName}");
-        }
     }
 
 
@@ -36,16 +31,15 @@ public class Commands
     {
         var courses = await _courseRepository.GetAllAsync();
         foreach (var course in courses)
-        {
-            Console.WriteLine($"Course ID: {course.Id}, Name: {course.Name}, Teacher ID: {course.TeacherId}, Student ID: {course.StudentId}");
-        }
+            Console.WriteLine(
+                $"Course ID: {course.Id}, Name: {course.Name}, Teacher ID: {course.TeacherId}, Student ID: {course.StudentId}");
     }
+
     public async Task ListAllStudentsAsync()
     {
         var students = await _studentRepository.GetAllAsync();
         foreach (var student in students)
-        {
-            Console.WriteLine($"Student ID: {student.Id}, Name: {student.FirstName} {student.LastName}, Age: {student.Age}");
-        }
+            Console.WriteLine(
+                $"Student ID: {student.Id}, Name: {student.FirstName} {student.LastName}, Age: {student.Age}");
     }
 }

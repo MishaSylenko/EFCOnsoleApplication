@@ -20,7 +20,5 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
 
         builder.Property(s => s.Age)
             .IsRequired();
-
-        
     }
 }
