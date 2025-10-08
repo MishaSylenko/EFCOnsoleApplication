@@ -20,5 +20,11 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
 
         builder.Property(s => s.Age)
             .IsRequired();
+        
+        builder
+            .HasMany(e => e.Teachers)
+            .WithMany(c => c.Students)
+            .UsingEntity<Course>();
+                
     }
 }

@@ -19,10 +19,5 @@ public class CAContext : DbContext
         modelBuilder.ApplyConfiguration(new TeacherConfiguration());
         modelBuilder.ApplyConfiguration(new StudentConfiguration());
         modelBuilder.ApplyConfiguration(new CourseConfiguration());
-
-        modelBuilder.Entity<Student>()
-            .HasMany(e => e.Teachers)
-            .WithMany(c => c.Students)
-            .UsingEntity<Course>();
     }
 }
